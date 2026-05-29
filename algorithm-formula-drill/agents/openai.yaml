@@ -1,0 +1,4 @@
+interface:
+  display_name: "算法公式刷题"
+  short_description: "把算法公式转成应用练习题，并附答案、解析与常见误区。"
+  default_prompt: "Use $algorithm-formula-drill 根据我输入的公式生成算法应用导向的刷题题目、答案和解析。"
