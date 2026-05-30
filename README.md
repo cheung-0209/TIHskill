@@ -1,12 +1,38 @@
 # TIHskill
 
+<p align="center">
+  <a href="./README.md">
+    <img alt="English" src="https://img.shields.io/badge/English-README-2563eb?style=for-the-badge">
+  </a>
+  <a href="./README.zh-CN.md">
+    <img alt="简体中文" src="https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-README-dc2626?style=for-the-badge">
+  </a>
+</p>
+
+<p align="center">
+  <img alt="Codex Skill" src="https://img.shields.io/badge/Codex-Skill-111827">
+  <img alt="Formula Drill" src="https://img.shields.io/badge/Formula-Drill-16a34a">
+  <img alt="Language" src="https://img.shields.io/badge/Output-Chinese-0ea5e9">
+</p>
+
+<p align="center">
+  <a href="#overview">Overview</a> ·
+  <a href="#skill">Skill</a> ·
+  <a href="#repository-structure">Structure</a> ·
+  <a href="#example-usage">Usage</a>
+</p>
+
+## Overview
+
 This repository contains personal Codex skills for learning and research workflows.
 
-## algorithm-formula-drill
+The first skill, `algorithm-formula-drill`, turns algorithmic and mathematical formulas into practice problems with answers and explanations. It is designed for learners who prefer mastering formulas through drills rather than passive reading.
 
-`algorithm-formula-drill` is a Codex skill for turning algorithmic and mathematical formulas into practice problems with answers and explanations. It is designed for learners who prefer mastering formulas through drills rather than passive reading.
+## Skill
 
-The skill is especially useful for formulas involving:
+### algorithm-formula-drill
+
+`algorithm-formula-drill` focuses on formula learning in algorithm-heavy scenarios, especially formulas involving:
 
 - matrix computation and vector operations
 - machine learning losses and gradients
@@ -20,6 +46,7 @@ By default, the skill generates Chinese practice problems in an algorithm-orient
 ```text
 TIHskill/
   README.md
+  README.zh-CN.md
   algorithm-formula-drill/
     SKILL.md
     agents/
