@@ -89,23 +89,36 @@ Use this reference when generating more varied or larger exercise sets from algo
 
 ## Output Templates
 
-Use this compact template for each problem:
+Use this compact template for the problem section. Do not include answers here:
 
 ```text
 题目 n｜考察点：...
 题干：...
+```
+
+Then use this compact template for the final answer section:
+
+```text
+答案 n｜对应题目 n
 答案：...
 解析：...
 常见误区：...
 ```
 
-For interactive mode, omit answers and use:
+For interactive mode, output only the problem section and wait for the learner's response:
 
 ```text
 题目 n｜考察点：...
 题干：...
 作答要求：写出关键步骤，不只给最终结果。
 ```
+
+## Formula Rendering
+
+- Render standalone formulas with Markdown display math, such as `$$...$$`.
+- Render short symbols and terms with inline math, such as `$QK^T$` or `$d_k$`.
+- Do not wrap formulas in fenced code blocks unless the task is specifically about source code or raw text.
+- Code fences are appropriate for pseudo-code, Python snippets, shell commands, or file examples.
 
 ## Quantity Defaults
 

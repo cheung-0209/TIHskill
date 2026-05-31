@@ -7,14 +7,24 @@ description: "Generate algorithm-oriented practice problems, answers, and explan
 
 ## Core Behavior
 
-Turn each user-provided formula into Chinese practice problems that help the user understand and remember the formula through solving. Favor algorithm application over pure mathematical display. Unless the user requests otherwise, output both problems and solutions in the same response.
+Turn each user-provided formula into Chinese practice problems that help the user understand and remember the formula through solving. Favor algorithm application over pure mathematical display. Unless the user requests otherwise, output all problems first, then provide the answer key and explanations at the end of the same response.
 
 Use this default response shape:
 
 1. **公式拆解**: Explain variables, dimensions, constraints, and likely algorithm context.
-2. **刷题清单**: Generate about 6-8 problems by default.
-3. **答案与解析**: For each problem, include the answer, key steps, and common mistakes.
+2. **刷题清单**: Generate about 6-8 problems by default. List all problems before any answer appears.
+3. **答案与解析**: After the full problem list, provide answers, key steps, and common mistakes in the same numbering order.
 4. **掌握建议**: End with 2-4 short tips on what to practice next.
+
+## Formula Rendering
+
+Render mathematical formulas directly with Markdown math whenever the platform can render them:
+
+- Use display math for standalone formulas, for example `$$...$$`.
+- Use inline math for short symbols or terms, for example `$QK^T$`, `$d_k$`, or `$p_u^T q_i$`.
+- Do not put formulas in fenced code blocks merely to show the formula source.
+- Use fenced code blocks only for real code, pseudo-code, command lines, or literal file content.
+- When the user provides LaTeX, preserve the notation and render it instead of showing only the raw LaTeX string.
 
 ## Workflow
 
@@ -40,17 +50,18 @@ Use this default response shape:
    - Prefer small numbers and matrices that can be solved by hand.
    - Make the answer process explicit enough for a learner to check their own work.
    - Use stable terminology. Do not rename the same variable or concept just to avoid repetition.
+   - Keep answers out of the problem list. Put all answers and explanations in a separate final section.
 
 ## Problem Design Defaults
 
 - Default language: Chinese.
 - Default quantity: 6-8 problems per formula.
-- Default mode: problem, answer, and explanation together.
+- Default mode: all problems first, then a consolidated answer-and-explanation section.
 - Default audience: a learner studying algorithmic formulas through practice.
 - Default style: algorithm application with some exam-style structure.
-- Default notation: preserve the user's formula notation unless it is unclear; define any added notation.
+- Default notation: preserve and render the user's formula notation unless it is unclear; define any added notation.
 
-For larger formula sets, group questions by formula and keep each group short. If the user requests an interactive quiz, provide only the problems first and wait for their answers before grading.
+For larger formula sets, group questions by formula and keep each group short. Within each group, list questions first and answers afterward. If the user requests an interactive quiz, provide only the problems first and wait for their answers before grading.
 
 ## Domain Emphasis
 
