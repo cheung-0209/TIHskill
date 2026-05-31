@@ -18,13 +18,15 @@ Use this default response shape:
 
 ## Formula Rendering
 
-Render mathematical formulas directly with Markdown math whenever the platform can render them:
+Render mathematical formulas directly with Markdown math whenever the platform can render them. Prefer ChatGPT/Codex-style delimiters because some clients display dollar-delimited math as plain text.
 
-- Use display math for standalone formulas, for example `$$...$$`.
-- Use inline math for short symbols or terms, for example `$QK^T$`, `$d_k$`, or `$p_u^T q_i$`.
-- Do not put formulas in fenced code blocks merely to show the formula source.
+- Use display math for standalone formulas, for example `\[ ... \]`.
+- Use inline math for short symbols or terms, for example `\(QK^T\)`, `\(d_k\)`, or `\(p_u^T q_i\)`.
+- Avoid `$...$` and `$$...$$` unless the user specifically targets a renderer that requires dollar-delimited math.
+- Do not put formulas in fenced code blocks or inline code merely to show the formula source.
 - Use fenced code blocks only for real code, pseudo-code, command lines, or literal file content.
-- When the user provides LaTeX, preserve the notation and render it instead of showing only the raw LaTeX string.
+- When the user provides LaTeX, preserve the notation and place it inside renderable math delimiters instead of showing only the raw LaTeX string.
+- If the current interface still displays delimiters instead of rendering math, recognize this as a client-side rendering limitation and keep formulas readable without switching to code blocks.
 
 ## Workflow
 

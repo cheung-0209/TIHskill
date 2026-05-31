@@ -115,9 +115,10 @@ For interactive mode, output only the problem section and wait for the learner's
 
 ## Formula Rendering
 
-- Render standalone formulas with Markdown display math, such as `$$...$$`.
-- Render short symbols and terms with inline math, such as `$QK^T$` or `$d_k$`.
-- Do not wrap formulas in fenced code blocks unless the task is specifically about source code or raw text.
+- Render standalone formulas with Markdown display math, preferably `\[ ... \]`.
+- Render short symbols and terms with inline math, preferably `\(QK^T\)` or `\(d_k\)`.
+- Avoid `$...$` and `$$...$$` unless the target renderer specifically expects dollar-delimited math.
+- Do not wrap formulas in fenced code blocks or inline code unless the task is specifically about source code or raw text.
 - Code fences are appropriate for pseudo-code, Python snippets, shell commands, or file examples.
 
 ## Quantity Defaults
